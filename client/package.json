@@ -1,0 +1,47 @@
+{
+  "name": "zettel-extension-seed-client",
+  "version": "0.0.0",
+  "description": "ZettelExtension Seed - Client-side Extension",
+  "main": "src/index.ts",
+  "scripts": {
+    "upgrade": "zettel-ebt upgrade",
+    "version": "zettel-ebt version",
+    "build": "webpack && zettel-ebt pack && rimraf out/extension-function.js"
+  },
+  "dependencies": {
+    "@zettelyay/api-client": "^1.0.1",
+    "@zettelyay/api-types": "^1.0.1",
+    "@zettelyay/commons": "^2.3.2",
+    "@zettelyay/extension-api": "^1.0.2",
+    "@zettelyay/models": "^2.1.2"
+  },
+  "devDependencies": {
+    "@zettelyay/extension-build-tools": "^1.0.2",
+    "rimraf": "^5.0.0",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.4",
+    "webpack": "^5.82.0",
+    "webpack-cli": "^5.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zettelyay/zettel-extension-seed"
+  },
+  "keywords": [
+    "zettel",
+    "extension",
+    "client"
+  ],
+  "author": {
+    "name": "Zettel",
+    "email": "zettel@zettel.ooo"
+  },
+  "contributors": [
+    "Hessamoddin A Shokravi <ahs502@gmail.com>"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zettelyay/zettel-extension-seed/issues"
+  },
+  "homepage": "https://github.com/zettelyay/zettel-extension-seed/blob/master/README.md"
+}

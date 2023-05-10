@@ -1,0 +1,45 @@
+{
+  "name": "zettel-extension-seed-server",
+  "version": "0.0.0",
+  "description": "Zettel Extension Seed - Server-side API",
+  "main": "src/index.ts",
+  "scripts": {
+    "upgrade": "zettel-ebt upgrade",
+    "dev": "ts-node-dev --files src/index.ts",
+    "start": "ts-node --files src/index.ts"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/morgan": "^1.9.4",
+    "@zettelyay/api-server": "^1.0.1",
+    "@zettelyay/api-types": "^1.0.1",
+    "@zettelyay/commons": "^2.3.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "devDependencies": {
+    "@zettelyay/extension-build-tools": "^1.0.2",
+    "ts-node-dev": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zettelyay/zettel-extension-seed"
+  },
+  "keywords": [
+    "zettel",
+    "extension"
+  ],
+  "author": {
+    "name": "Zettel",
+    "email": "zettel@zettel.ooo"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zettelyay/zettel-extension-seed/issues"
+  },
+  "homepage": "https://github.com/zettelyay/zettel-extension-seed/blob/master/README.md"
+}
