@@ -1,1 +1,0 @@
-export const EXTENSION_ACCESS_KEY = process.env.ZETTEL_EXTENSION_ACCESS_KEY ?? ''

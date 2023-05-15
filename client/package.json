@@ -1,7 +1,7 @@
 {
   "name": "zettel-extension-seed-client",
   "version": "0.0.0",
-  "description": "ZettelExtension Seed - Client-side Extension",
+  "description": "Zettel Extension Seed - Client-side Extension",
   "main": "src/index.ts",
   "scripts": {
     "upgrade": "zettel-ebt upgrade",
@@ -9,14 +9,15 @@
     "build": "webpack && zettel-ebt pack && rimraf out/extension-function.js"
   },
   "dependencies": {
-    "@zettelyay/api-client": "^1.0.1",
-    "@zettelyay/api-types": "^1.0.1",
+    "@zettelyay/api-client": "^4.0.0",
+    "@zettelyay/api-types": "^2.2.1",
     "@zettelyay/commons": "^2.3.2",
     "@zettelyay/extension-api": "^1.0.2",
     "@zettelyay/models": "^2.1.2"
   },
   "devDependencies": {
-    "@zettelyay/extension-build-tools": "^1.0.2",
+    "@zettelyay/extension-build-tools": "^1.0.5",
+    "dotenv-webpack": "^8.0.1",
     "rimraf": "^5.0.0",
     "ts-loader": "^9.4.2",
     "typescript": "^5.0.4",
