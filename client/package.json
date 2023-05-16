@@ -9,9 +9,9 @@
     "build": "webpack && zettel-ebt pack && rimraf out/extension-function.js"
   },
   "dependencies": {
-    "@zettelyay/api-client": "^4.0.0",
-    "@zettelyay/api-types": "^2.2.1",
-    "@zettelyay/commons": "^2.3.2",
+    "@zettelyay/api-client": "^4.2.1",
+    "@zettelyay/api-types": "^2.4.1",
+    "@zettelyay/commons": "^2.4.0",
     "@zettelyay/extension-api": "^1.0.2",
     "@zettelyay/models": "^2.1.2"
   },
