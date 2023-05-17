@@ -1,4 +1,4 @@
-import { ExtensionHelperFunction } from '@zettelyay/extension-api'
+import { ExtensionHelperFunction } from '@zettelooo/extension-api'
 import { PageExtensionData } from '../../shared/PageExtensionData'
 
 export const watchPageExtensionData: ExtensionHelperFunction<

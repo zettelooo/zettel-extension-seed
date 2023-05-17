@@ -1,6 +1,7 @@
 # Zettel Extension Seed
 
-This is a seed project to speed-up developing extensions for [Zettel](https://app.zettel.ooo). You can read more about the platform [here](http://zettel.ooo).
+This is a seed project to speed-up developing extensions for [Zettel](https://app.zettel.ooo).
+You can read more about the platform [here](http://zettel.ooo).
 
 The repository consists of two projects:
 
@@ -8,10 +9,10 @@ The repository consists of two projects:
 
    Here are the scripts to support that:
 
-   - To upgrade the Zettel official dependencies to their newest versions in order to access the latest API end-points and data models:
+   - To update the Zettel official dependencies to their newest versions in order to access the latest API end-points and data models:
 
      ```sh
-     client$ npm run upgrade
+     client$ npm run update
      ```
 
    - To upgrade the extension version in `public/manifest.jsonc` file:
@@ -32,10 +33,10 @@ The repository consists of two projects:
 
    Here are the scripts to support that:
 
-   - To upgrade the Zettel official dependencies to their newest versions in order to access the latest API end-points and data models:
+   - To update the Zettel official dependencies to their newest versions in order to access the latest API end-points and data models:
 
      ```sh
-     server$ npm run upgrade
+     server$ npm run update
      ```
 
    - To start the server:

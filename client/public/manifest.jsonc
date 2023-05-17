@@ -2,7 +2,7 @@
 // Upload, test, manage, and publish your extension via Zettel developer console at https://app.zettel.ooo/developer
 
 {
-  "$schema": "../node_modules/@zettelyay/extension-api/dist/manifest-json-schema.json",
+  "$schema": "../node_modules/@zettelooo/extension-api/dist/manifest-json-schema.json",
 
   "appId": "your-extension-id", // Identifier of your extension, must be unique within all your extensions.
   "version": "0.0.0", // Very important. Update it so that the client is updated to the latest extension release.

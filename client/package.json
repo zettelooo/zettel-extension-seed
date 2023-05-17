@@ -1,22 +1,24 @@
 {
-  "name": "zettel-extension-seed-client",
+  "name": "@zettelooo/zettel-extension-seed-client",
   "version": "0.0.0",
   "description": "Zettel Extension Seed - Client-side Extension",
-  "main": "src/index.ts",
+  "main": "./src/index.ts",
   "scripts": {
-    "upgrade": "zettel-ebt upgrade",
+    "bt": "zettel-bt",
+    "upgrade": "zettel-bt update",
     "version": "zettel-ebt version",
     "build": "webpack && zettel-ebt pack && rimraf out/extension-function.js"
   },
   "dependencies": {
-    "@zettelyay/api-client": "^4.2.1",
-    "@zettelyay/api-types": "^2.4.1",
-    "@zettelyay/commons": "^2.4.0",
-    "@zettelyay/extension-api": "^1.0.2",
-    "@zettelyay/models": "^2.1.2"
+    "@zettelooo/api-client": "^4.2.4",
+    "@zettelooo/api-types": "^2.4.5",
+    "@zettelooo/commons": "^2.4.1",
+    "@zettelooo/extension-api": "^1.0.3",
+    "@zettelooo/models": "^2.1.3"
   },
   "devDependencies": {
-    "@zettelyay/extension-build-tools": "^1.0.5",
+    "@zettelooo/build-tools": "^1.2.6",
+    "@zettelooo/extension-build-tools": "^1.0.6",
     "dotenv-webpack": "^8.0.1",
     "rimraf": "^5.0.0",
     "ts-loader": "^9.4.2",
@@ -26,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zettelyay/zettel-extension-seed"
+    "url": "https://github.com/zettelooo/zettel-extension-seed"
   },
   "keywords": [
     "zettel",
@@ -42,7 +44,7 @@
   ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/zettelyay/zettel-extension-seed/issues"
+    "url": "https://github.com/zettelooo/zettel-extension-seed/issues"
   },
-  "homepage": "https://github.com/zettelyay/zettel-extension-seed/blob/master/README.md"
+  "homepage": "https://github.com/zettelooo/zettel-extension-seed/blob/master/README.md"
 }
