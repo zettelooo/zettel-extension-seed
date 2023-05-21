@@ -8,6 +8,7 @@
   "version": "0.0.0", // Very important. Update it so that the client is updated to the latest extension release.
   "name": "Your extension name", // Display name of your extension in the Zettel app store.
   "description": "Your extension description", // Description of your extension in the Zettel app store.
+  "aiDescription": "Your extension's functionality described for the AI engine", // Optional. Description of your extension for LLM powered AI engine in human language.
   "avatar": {
     "file": "extension.png" // Icon of your extension in the Zettel app store. The file is to be placed in the public folder.
     // "dataUrl": ""  // Or, put the icon's image data URL instead.
