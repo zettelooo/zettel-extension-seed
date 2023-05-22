@@ -29,6 +29,11 @@ The repository consists of two projects:
      ```
      > **Note:** The built extension goes to the `client/out` folder.
 
+   - Same as above, plus it also takes care of the upload part:
+     ```sh
+     client$ npm run deploy
+     ```
+
 1. The `server` project, which can only help by extensions that require their own server-side implementation.
 
    Here are the scripts to support that:
