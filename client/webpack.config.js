@@ -23,7 +23,7 @@ module.exports = {
     }),
   ],
   output: {
-    filename: 'extension-function.js',
+    filename: 'starter.js',
     path: path.resolve(__dirname, 'out'),
     clean: true,
   },

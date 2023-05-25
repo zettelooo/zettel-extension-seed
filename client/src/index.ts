@@ -1,33 +1,31 @@
-import { WindowWithExtensionFunction } from '@zettelooo/extension-api'
-import { ExtensionScope } from '@zettelooo/models'
+import { ZettelExtensions } from '@zettelooo/extension-api'
 import { PageExtensionData } from '../../shared/PageExtensionData'
-import { watchPageExtensionData } from './watchPageExtensionData'
 
-void ((window as WindowWithExtensionFunction).extensionFunction = function (api) {
+void ((window as ZettelExtensions.WindowWithStarter).$starter = function (api) {
   this.while('activated', function ({ activatedApi }) {
     this.while('signedIn', function ({ signedInApi }) {
-      this.while('pagePanelRendered', function ({ pagePanelRenderedApi }) {
-        if (!this.scopes.includes(ExtensionScope.Page)) return
+      this.while('pagePanel', function ({ pagePanelApi }) {
+        if (!this.scopes.includes(ZettelExtensions.Scope.Page)) return
 
         const applyPageExtensionData = (): void => {
+          const pageExtensionData = pagePanelApi.data.page.extensionData as PageExtensionData
           quickActionRegistration.reference.current?.update({
             disabled: false,
-            switchChecked: Boolean(pageExtensionDataRef.current?.enabled),
+            switchChecked: Boolean(pageExtensionData?.enabled),
           })
           tipMessageRegistration.reference.current?.update({
-            initialState: pageExtensionDataRef.current,
-            hidden: !pageExtensionDataRef.current,
+            initialState: pageExtensionData,
+            hidden: !pageExtensionData,
           })
         }
-        const { pageExtensionDataRef } = watchPageExtensionData.bind(this)({ api }, applyPageExtensionData)
+
+        this.register(pagePanelApi.watch(data => data.page.extensionData, applyPageExtensionData))
 
         const quickActionRegistration = this.register(
-          pagePanelRenderedApi.registry.quickAction(() => ({
+          pagePanelApi.registry.quickAction(() => ({
             title: 'My extension',
             description: 'My extension description',
-            avatarUrl: api.extensionHeader.avatar.file
-              ? api.getFileUrl(api.extensionHeader.avatar.file)
-              : api.extensionHeader.avatar.dataUrl,
+            avatarUrl: api.header.avatar.file ? api.getFileUrl(api.header.avatar.file) : api.header.avatar.dataUrl,
             disabled: true,
             switchChecked: false,
             async onClick() {
@@ -48,12 +46,12 @@ void ((window as WindowWithExtensionFunction).extensionFunction = function (api)
         )
 
         const loadingIndicatorRegistration = this.register(
-          pagePanelRenderedApi.registry.loadingIndicator(() => `Updating ${api.extensionHeader.name} status...`),
+          pagePanelApi.registry.loadingIndicator(() => `Updating ${api.header.name} status...`),
           { initiallyInactive: true }
         )
 
         const tipMessageRegistration = this.register(
-          pagePanelRenderedApi.registry.message<PageExtensionData>(() => ({
+          pagePanelApi.registry.message<PageExtensionData>(() => ({
             initialState: undefined,
             render: ({ renderContext, un }) => ({
               encapsulated: true,
@@ -80,7 +78,7 @@ void ((window as WindowWithExtensionFunction).extensionFunction = function (api)
           try {
             loadingIndicatorRegistration.activate()
             await signedInApi.access.setPageExtensionData<PageExtensionData>(
-              pagePanelRenderedApi.target.pageId,
+              pagePanelApi.target.pageId,
               newPageExtensionData
             )
           } catch {
