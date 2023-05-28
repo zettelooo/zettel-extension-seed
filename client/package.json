@@ -14,11 +14,11 @@
     "@zettelooo/api-client": "^5.2.0",
     "@zettelooo/api-types": "^4.2.1",
     "@zettelooo/commons": "^2.4.1",
-    "@zettelooo/extension-api": "^2.0.1"
+    "@zettelooo/extension-api": "^2.3.0"
   },
   "devDependencies": {
     "@zettelooo/build-tools": "^1.3.1",
-    "@zettelooo/extension-build-tools": "^1.1.2",
+    "@zettelooo/extension-build-tools": "^1.1.3",
     "dotenv-cli": "^7.2.1",
     "dotenv-webpack": "^8.0.1",
     "rimraf": "^5.0.0",

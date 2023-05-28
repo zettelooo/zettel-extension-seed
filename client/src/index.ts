@@ -7,20 +7,6 @@ void ((window as ZettelExtensions.WindowWithStarter).$starter = function (api) {
       this.while('pagePanel', function ({ pagePanelApi }) {
         if (!this.scopes.includes(ZettelExtensions.Scope.Page)) return
 
-        const applyPageExtensionData = (): void => {
-          const pageExtensionData = pagePanelApi.data.page.extensionData as PageExtensionData
-          quickActionRegistration.reference.current?.update({
-            disabled: false,
-            switchChecked: Boolean(pageExtensionData?.enabled),
-          })
-          tipMessageRegistration.reference.current?.update({
-            initialState: pageExtensionData,
-            hidden: !pageExtensionData,
-          })
-        }
-
-        this.register(pagePanelApi.watch(data => data.page.extensionData, applyPageExtensionData))
-
         const quickActionRegistration = this.register(
           pagePanelApi.registry.quickAction(() => ({
             title: 'My extension',
@@ -72,6 +58,25 @@ void ((window as ZettelExtensions.WindowWithStarter).$starter = function (api) {
             variant: 'information',
             hidden: true,
           }))
+        )
+
+        this.register(
+          pagePanelApi.watch(
+            data => data.page.extensionData as PageExtensionData,
+            pageExtensionData => {
+              quickActionRegistration.reference.current?.update({
+                disabled: false,
+                switchChecked: Boolean(pageExtensionData?.enabled),
+              })
+              tipMessageRegistration.reference.current?.update({
+                initialState: pageExtensionData,
+                hidden: !pageExtensionData,
+              })
+            },
+            {
+              initialCallback: true,
+            }
+          )
         )
 
         async function setPageExtensionData(newPageExtensionData: PageExtensionData): Promise<void> {
