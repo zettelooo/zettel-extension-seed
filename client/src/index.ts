@@ -11,7 +11,7 @@ void ((window as ZettelExtensions.WindowWithStarter).$starter = function (api) {
           pagePanelApi.registry.quickAction(() => ({
             title: 'My extension',
             description: 'My extension description',
-            avatarUrl: api.header.avatar.file ? api.getFileUrl(api.header.avatar.file) : api.header.avatar.dataUrl,
+            avatarUrl: api.header.avatarUrl,
             disabled: true,
             switchChecked: false,
             async onClick() {
@@ -46,7 +46,7 @@ void ((window as ZettelExtensions.WindowWithStarter).$starter = function (api) {
                 : `
 <div>
   <p style="display: flex; align-items: center; gap: 10px;">
-    <img src="${api.getFileUrl('idea.png')}" alt="tip" />
+    <img src="${api.getFileUrl({ filePath: 'idea.png' })}" alt="tip" />
     This is a tip about my extension!
   </p>
   <p>

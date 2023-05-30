@@ -14,7 +14,7 @@
     "@zettelooo/api-client": "^5.2.0",
     "@zettelooo/api-types": "^4.2.1",
     "@zettelooo/commons": "^2.4.1",
-    "@zettelooo/extension-api": "^2.3.0"
+    "@zettelooo/extension-api": "^2.4.2"
   },
   "devDependencies": {
     "@zettelooo/build-tools": "^1.3.1",
