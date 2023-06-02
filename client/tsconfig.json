@@ -10,6 +10,6 @@
     "noImplicitAny": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src", "../shared"],
+  "include": ["src"],
   "exclude": ["node_modules"]
 }

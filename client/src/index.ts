@@ -1,5 +1,5 @@
 import { ZettelExtensions } from '@zettelooo/extension-api'
-import { PageExtensionData } from '../../shared/PageExtensionData'
+import { PageExtensionData } from 'shared'
 
 void ((window as ZettelExtensions.WindowWithStarter).$starter = function (api) {
   this.while('activated', function ({ activatedApi }) {

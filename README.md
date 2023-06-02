@@ -3,7 +3,7 @@
 This is a seed project to speed-up developing extensions for [Zettel](https://app.zettel.ooo).
 You can read more about the platform [here](http://zettel.ooo).
 
-The repository consists of two projects:
+The repository consists of three projects:
 
 1. The `client` project, this is the main extension implementation which will be a part of the Web app itself.
 
@@ -51,6 +51,16 @@ The repository consists of two projects:
      ```
      > **Note:** You can specify on what port it will serve your API by prepending `PORT=4000` to the commands above, by default it uses the port `4000`.
 
-Both projects are filled with some dummy implementations to show-case how to setup things, feel free to modify it, or even start your own projects following the prctices used in this seed project.
+1. The `shared` project, which contains the shared implementation between the two others.
+
+   Here are the scripts to support that:
+
+   - To update the Zettel official dependencies to their newest versions in order to access the latest API end-points and data models:
+
+     ```sh
+     shared$ npm run update
+     ```
+
+All projects are filled with some dummy implementations to show-case how to setup things, feel free to modify it, or even start your own projects following the prctices used in this seed project.
 
 For more information, please [contact the development](mailto:ahs502@gmail.com) team.
