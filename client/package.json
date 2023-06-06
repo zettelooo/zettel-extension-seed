@@ -11,10 +11,10 @@
     "deploy": "npm run build && dotenv -e ../.env zettel-ebt upload"
   },
   "dependencies": {
-    "@zettelooo/api-client": "^5.2.1",
-    "@zettelooo/api-types": "^4.3.0",
+    "@zettelooo/api-client": "^5.3.0",
+    "@zettelooo/api-types": "^4.4.0",
     "@zettelooo/commons": "^2.5.0",
-    "@zettelooo/extension-api": "^2.4.4",
+    "@zettelooo/extension-api": "^2.5.3",
     "shared": "file:../shared"
   },
   "devDependencies": {
