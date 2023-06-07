@@ -8,7 +8,7 @@
     "update": "zettel-bt update"
   },
   "peerDependencies": {
-    "@zettelooo/api-types": "^4.4.0",
+    "@zettelooo/api-types": "^4.4.3",
     "@zettelooo/commons": "^2.5.0"
   },
   "devDependencies": {
