@@ -1,4 +1,4 @@
-# Zettel Extension Seed
+# Zettel Extension (Module) Seed 
 
 This is a seed project to speed-up developing extensions for [Zettel](https://app.zettel.ooo).
 You can read more about the platform [here](http://zettel.ooo).
@@ -63,4 +63,4 @@ The repository consists of three projects:
 
 All projects are filled with some dummy implementations to show-case how to setup things, feel free to modify it, or even start your own projects following the prctices used in this seed project.
 
-For more information, please [contact the development](mailto:ahs502@gmail.com) team.
+
