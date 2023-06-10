@@ -1,7 +1,7 @@
 import { ZettelExtensions } from '@zettelooo/extension-api'
-import { PageExtensionData } from 'shared'
+import { CardExtensionData, PageExtensionData } from 'shared'
 
-void ((window as ZettelExtensions.WindowWithStarter).$starter = function (api) {
+void ((window as ZettelExtensions.WindowWithStarter<PageExtensionData, CardExtensionData>).$starter = function (api) {
   this.while('activated', function ({ activatedApi }) {
     this.while('signedIn', function ({ signedInApi }) {
       this.while('pagePanel', function ({ pagePanelApi }) {
@@ -62,7 +62,7 @@ void ((window as ZettelExtensions.WindowWithStarter).$starter = function (api) {
 
         this.register(
           pagePanelApi.watch(
-            data => data.page.extensionData as PageExtensionData,
+            data => data.page.extensionData,
             pageExtensionData => {
               quickActionRegistration.reference.current?.update({
                 disabled: false,
@@ -82,10 +82,7 @@ void ((window as ZettelExtensions.WindowWithStarter).$starter = function (api) {
         async function setPageExtensionData(newPageExtensionData: PageExtensionData): Promise<void> {
           try {
             loadingIndicatorRegistration.activate()
-            await signedInApi.access.setPageExtensionData<PageExtensionData>(
-              pagePanelApi.target.pageId,
-              newPageExtensionData
-            )
+            await signedInApi.access.setPageExtensionData(pagePanelApi.target.pageId, newPageExtensionData)
           } catch {
             // Do nothing!
           } finally {
