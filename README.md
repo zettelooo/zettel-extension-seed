@@ -1,4 +1,5 @@
-# Zettel Extension (Module) Seed 
+# Zettel Module Boilerplate
+
 
 This is a seed project to speed-up developing extensions for [Zettel](https://app.zettel.ooo).
 You can read more about the platform [here](http://zettel.ooo).
