@@ -1,8 +1,10 @@
 # Zettel Module Boilerplate
 
+This repository contains a sample project that you can use as the starting point for developing a [Zettel](https://app.zettel.ooo) module.
 
-This is a seed project to speed-up developing extensions for [Zettel](https://app.zettel.ooo).
-You can read more about the platform [here](http://zettel.ooo).
+If it's your first time buidling a Zettel module, please check out Zettel docs for beginner tutorials. 
+
+--- 
 
 The repository consists of three projects:
 
