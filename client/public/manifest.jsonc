@@ -1,14 +1,14 @@
 // This file contains metadata of your extension.
-// Upload, test, manage, and publish your extension via Zettel developer console at https://app.zettel.ooo/developer
+// Upload, test, manage, and publish your extension from Zettel Developer Console at https://app.zettel.ooo/developer
 
 {
   "$schema": "../node_modules/@zettelooo/extension-api/dist/manifest-json-schema.json",
 
-  "appId": "your-extension-id", // Identifier of your extension, must be unique within all your extensions.
-  "version": "0.0.0", // Very important. Update it so that the client is updated to the latest extension release.
-  "name": "Your extension name", // Display name of your extension in the Zettel app store.
-  "description": "Your extension description", // Description of your extension in the Zettel app store.
-  "aiDescription": "Your extension's functionality described for the AI engine", // Optional. Description of your extension for LLM powered AI engine in human language.
+  "appId": "my-text", // Identifier of your extension, must be unique within all your extensions.
+  "version": "1.0.0", // Very important. Update it so that the client is updated to the latest extension release.
+  "name": "My Text", // Display name of your extension in the Zettel app store.
+  "description": "My text extension to make every card a text", // Description of your extension in the Zettel app store.
+  "aiDescription": "Make cards texts. Store raw text on cards. Put text values on cards. Display text for each card. Text notes.", // Optional. Description of your extension for LLM powered AI engine in human language.
   "avatar": {
     "file": "extension.png" // Icon of your extension in the Zettel app store. The file is to be placed in the public folder.
     // "dataUrl": ""  // Or, put the icon's image data URL instead.

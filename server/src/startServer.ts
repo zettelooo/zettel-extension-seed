@@ -3,11 +3,9 @@ import cors from 'cors'
 import express from 'express'
 import morgan from 'morgan'
 import path from 'path'
-import { CardExtensionData, PageExtensionData } from 'shared'
+import { Data } from 'shared'
 
-export function startServer(
-  connection: ZettelServices.Extension.Ws.GetUpdates<PageExtensionData, CardExtensionData>
-): void {
+export function startServer(connection: ZettelServices.Ws.GetUpdates<Data>): void {
   const port = Number(process.env.PORT || 4000)
 
   const app = express()

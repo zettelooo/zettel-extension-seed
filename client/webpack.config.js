@@ -23,7 +23,7 @@ module.exports = {
     }),
   ],
   output: {
-    filename: 'starter.js',
+    filename: 'index.js',
     path: path.resolve(__dirname, 'out'),
     clean: true,
   },
