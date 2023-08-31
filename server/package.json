@@ -15,7 +15,7 @@
     "@types/morgan": "^1.9.4",
     "@zettelooo/api-server": "^6.0.0",
     "@zettelooo/api-types": "^6.4.2",
-    "@zettelooo/commons": "^2.5.1",
+    "@zettelooo/commons": "^2.6.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",

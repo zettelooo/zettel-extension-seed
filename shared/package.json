@@ -9,7 +9,7 @@
   },
   "peerDependencies": {
     "@zettelooo/api-types": "^6.4.2",
-    "@zettelooo/commons": "^2.5.1"
+    "@zettelooo/commons": "^2.6.0"
   },
   "devDependencies": {
     "@zettelooo/build-tools": "^1.3.1"

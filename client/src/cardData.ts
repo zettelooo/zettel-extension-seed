@@ -15,4 +15,15 @@ ZettelExtensions.setCardData<Data>({
   },
 
   extractors: {},
+
+  commonExtractor: {
+    to(data) {
+      if (data?.text === undefined) return undefined
+      return { text: data.text }
+    },
+    from(data) {
+      if (data?.text === undefined) return undefined
+      return { text: data.text }
+    },
+  },
 })

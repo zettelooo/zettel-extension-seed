@@ -33,11 +33,11 @@ export const registerQuickAction: ZettelExtensions.Helper<
 
   this.register(
     pagePanelApi.watch(
-      data => data.page.data,
-      pageData => {
+      data => data.page.data?.disabled ?? false,
+      disabled => {
         quickActionRegistration.reference.current?.update({
           disabled: false,
-          switchChecked: !pageData?.disabled,
+          switchChecked: !disabled,
         })
       },
       {

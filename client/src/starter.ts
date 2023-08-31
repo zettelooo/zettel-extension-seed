@@ -13,9 +13,9 @@ ZettelExtensions.setStarter<Data>(function (api) {
         registerInitializer.bind(this)({ signedInApi, pagePanelApi })
         registerQuickAction.bind(this)({ api, activatedApi, signedInApi, pagePanelApi })
         registerTipMessage.bind(this)({ api, signedInApi, pagePanelApi })
-        this.while('composer', function ({ composerApi }) {
-          registerComposerPart.bind(this)({ activatedApi, composerApi })
-        })
+      })
+      this.while('composer', function ({ composerApi }) {
+        registerComposerPart.bind(this)({ activatedApi, composerApi })
       })
     })
     this.while('card', function ({ cardApi }) {
